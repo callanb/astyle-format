@@ -1,6 +1,6 @@
 # astyle-format
 
-This extension faciliates the use of Artistic Style (Astyle) within VSC to format code.
+This extension facilitates the use of Artistic Style (Astyle) within VSC to format code.
 
 ## Astyle
 
