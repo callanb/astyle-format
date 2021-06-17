@@ -2,6 +2,8 @@
 
 This extension facilitates the use of Artistic Style (Astyle) within VSC to format code.
 
+https://marketplace.visualstudio.com/items?itemName=callanb.astyle-format.
+
 ## Astyle
 
 Astyle can be found at http://astyle.sourceforge.net/.
