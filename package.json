@@ -1,7 +1,7 @@
 {
 	"name": "astyle-format",
 	"displayName": "astyle-format",
-	"description": "Faciliates using astyle formatting within VSC.",
+	"description": "Facilitates using astyle formatting within VSC.",
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.56.2"
