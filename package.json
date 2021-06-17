@@ -1,0 +1,62 @@
+{
+	"name": "astyle-format",
+	"displayName": "astyle-format",
+	"description": "Faciliates using astyle formatting within VSC.",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.56.2"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:astyle-format.format"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "astyle-format.format",
+				"title": "Astyle Format Document"
+			}
+		],
+		"keybindings": [
+			{
+			  "key": "ctrl+alt+l",
+			  "command": "astyle-format.format"
+			}
+		  ],
+		"configuration": {
+			"type": "object",
+			"title": "astyle-format config",
+			"properties": {
+				"astyle-format.path": {
+				"type": "string",
+				"default": null,
+				"description": "path to astyle executable"
+				},
+				"astyle-format.args": {
+				"type": "string",
+				"default": null,
+				"description": "arguments passed to astyle"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.57.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	}
+}
