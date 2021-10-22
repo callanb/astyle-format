@@ -14,7 +14,7 @@ function activate(context)
 			{
 				let command = config.path + ' ';
 				if (config.args) command += config.args;
-				command += ' ' + path;
+				command += ' \"' + path + '\"';
 				child.exec(command, (error, out, errstr) => {
 					if (error) {
 						vscode.window.showErrorMessage('astyle-format error: ' + errstr);
