@@ -11,7 +11,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:astyle-format.format"
+		"onStartupFinished"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -32,14 +32,14 @@
 			"title": "astyle-format config",
 			"properties": {
 				"astyle-format.path": {
-				"type": "string",
-				"default": null,
-				"description": "path to astyle executable"
+					"type": "string",
+					"default": null,
+					"description": "path to astyle executable"
 				},
 				"astyle-format.args": {
-				"type": "string",
-				"default": null,
-				"description": "arguments passed to astyle"
+					"type": "string",
+					"default": null,
+					"description": "arguments passed to astyle"
 				}
 			}
 		}
