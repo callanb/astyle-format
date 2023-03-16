@@ -11,7 +11,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:astyle-format.format"
+		"onStartupFinished"
 	],
 	"main": "./extension.js",
 	"contributes": {

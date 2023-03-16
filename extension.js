@@ -1,8 +1,11 @@
 const vscode = require('vscode');
 const child = require('child_process');
 
+const COMMAND_FORMAT = "astyle-format.format"; // keep same as in package.json
+
 function activate(context) {
-    let disposable = vscode.commands.registerCommand('astyle-format.format', function() {
+    
+    let disposable = vscode.commands.registerCommand(COMMAND_FORMAT, function() {
         const config = vscode.workspace.getConfiguration('astyle-format'),
             file = vscode.window.activeTextEditor.document,
             path = file.fileName;
@@ -22,6 +25,18 @@ function activate(context) {
             }
         });
     });
+
+    vscode.languages.getLanguages().then(list => {
+        for(const language of list){
+            vscode.languages.registerDocumentFormattingEditProvider(language, {
+                provideDocumentFormattingEdits(document){
+                    vscode.commands.executeCommand(COMMAND_FORMAT);
+                    return [];
+                }
+            });
+        }
+    });
+
     context.subscriptions.push(disposable);
 }
 
